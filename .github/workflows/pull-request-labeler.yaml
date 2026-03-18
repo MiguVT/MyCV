@@ -33,7 +33,6 @@ jobs:
           'This PR has too many changes.
           Please make sure you are NOT addressing multiple issues with one PR.'
         files_to_ignore: |
-          "examples/*"
           "*.otf"
           "*.pdf"
           "*.png"

@@ -1,0 +1,310 @@
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{awesome-cv}
+
+% Configure page margins with geometry
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=1.8cm, footskip=.5cm}
+
+% Specify the location of the included fonts
+\fontdir[fonts/]
+
+% Color for highlights
+\colorlet{awesome}{awesome-red}
+% Uncomment if you would like to specify your own color
+% \definecolor{awesome}{HTML}{CA63A8}
+
+% Colors for text
+% Uncomment if you would like to specify your own color
+% \definecolor{darktext}{HTML}{414141}
+% \definecolor{text}{HTML}{333333}
+% \definecolor{graytext}{HTML}{5D5D5D}
+% \definecolor{lighttext}{HTML}{999999}
+% \definecolor{sectiondivider}{HTML}{5D5D5D}
+
+% Set false if you don't want to highlight section with awesome color
+\setbool{acvSectionColorHighlight}{true}
+
+% If you would like to change the social information separator from a pipe (|) to something else
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+
+%-------------------------------------------------------------------------------
+%	PERSONAL INFORMATION
+%	Comment any of the lines below if they are not required
+%-------------------------------------------------------------------------------
+% Available options: circle|rectangle,edge/noedge,left/right
+% \photo[rectangle,edge,right]{./examples/profile}
+\name{Yara}{Marín}
+\position{Backend Developer {\enskip\cdotp\enskip} Cybersecurity Enthusiast}
+\address{Spain}
+
+\email{profesional@miguvt.com}
+\homepage{miguvt.com}
+\github{MiguVT}
+\extrainfo{\faBlog\enskip \href{https://blog.miguvt.com}{blog.miguvt.com}}
+% \linkedin{your-linkedin}
+% \gitlab{gitlab-id}
+% \stackoverflow{SO-id}{SO-name}
+% \twitter{@twit}
+% \skype{skype-id}
+% \reddit{reddit-id}
+% \medium{madium-id}
+% \kaggle{kaggle-id}
+% \hackerrank{hackerrank-id}
+% \googlescholar{googlescholar-id}{name-to-display}
+%% \firstname and \lastname will be used
+% \googlescholar{googlescholar-id}{}
+% \extrainfo{extra information}
+
+\quote{``Backend-focused. Privacy-driven. Always innovating."}
+
+
+%-------------------------------------------------------------------------------
+\begin{document}
+
+% Print the header with above personal information
+% Give optional argument to change alignment(C: center, L: left, R: right)
+\makecvheader[C]
+
+% Print the footer with 3 arguments(<left>, <center>, <right>)
+% Leave any of these blank if they are not needed
+\makecvfooter
+  {\today}
+  {Yara Marín~~~·~~~Curriculum Vitae}
+  {\thepage}
+
+
+%-------------------------------------------------------------------------------
+%	CV/RESUME CONTENT
+%-------------------------------------------------------------------------------
+
+%-------------------------------------------------------------------------------
+%	SUMMARY
+%-------------------------------------------------------------------------------
+\cvsection{Summary}
+\begin{cvparagraph}
+Versatile Backend Developer and Systems/Networks student dedicated to building reliable, scalable, and privacy-first systems. Experienced in managing full self-hosted infrastructures (Linux, Docker, Nginx) and actively contributing to open-source communities. I combine logical problem-solving and automation with strong communication skills, bridging the gap between technical architecture and creative digital content.
+\end{cvparagraph}
+
+
+%-------------------------------------------------------------------------------
+%	EXPERIENCE
+%-------------------------------------------------------------------------------
+\cvsection{Experience}
+\begin{cventries}
+
+  \cventry
+    {Web Developer (Freelance)} % Job title
+    {Subastasac} % Organization
+    {Remote} % Location
+    {Present} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Leading the complete remake and modernization of the Subastasac web portal, optimizing it for concurrent online asset auctions.}
+        \item {Improving security and user flow to ensure reliable, high-performance bidding mechanics.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {IT Intern (Prácticas de empresa)} % Job title
+    {SDI} % Organization
+    {Spain} % Location
+    {2025} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Provided technical support, diagnosed system issues, and contributed to web development tasks during a two-month internship.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+%-------------------------------------------------------------------------------
+%	OPEN SOURCE & COMMUNITY CONTRIBUTIONS
+%-------------------------------------------------------------------------------
+\cvsection{Open Source Contributions}
+\begin{cventries}
+
+  \cventry
+    {Core Contributor}
+    {Chatterino2 (2,400+ GitHub Stars)}
+    {GitHub}
+    {2023 - Present}
+    {
+      \begin{cvitems}
+        \item {Developed and integrated extension ID support for custom plugins in this high-performance Twitch chat client written in C++.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Open Source Developer}
+    {AxMinions (30,000+ Downloads) \& ServerMappings}
+    {GitHub}
+    {2023 - 2024}
+    {
+      \begin{cvitems}
+        \item {Fixed critical dependency issues and resolved numerous technical bugs for AxMinions, ensuring stability for thousands of active users.}
+        \item {Added heavily optimized Minecraft server details into LunarClient's ServerMappings registry.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Linux/VR Ecosystem Contributor}
+    {LVRA (Linux VR Adventures) Wiki}
+    {GitHub / Discord}
+    {2024}
+    {
+      \begin{cvitems}
+        \item {Authored a critical scripting fix for the Valve Index "blank EDID" bug on Linux, which was widely adopted and became a community standard on the official wiki (wiki.vronlinux.org).}
+      \end{cvitems}
+    }
+  
+  \cventry
+    {Active Contributor}
+    {FreesmLauncher (380+ GitHub Stars)}
+    {GitHub / Discord}
+    {2024 - Present}
+    {
+      \begin{cvitems}
+        \item {Contributed to the core codebase and provided technical troubleshooting for users within the community Discord server.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+
+%-------------------------------------------------------------------------------
+%	PROJECTS
+%-------------------------------------------------------------------------------
+\cvsection{Selected Projects}
+\begin{cventries}
+
+  \cventry
+    {Lead Developer} % Role
+    {Migurinth} % Title
+    {} % Location
+    {Active} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Engineered a privacy-first Modrinth fork that strips out all telemetry and advertisements, prioritizing user data protection.}
+        \item {Implemented full offline and "cracked" environment support tailored for broader server accessibility.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Creator \& Developer} % Role
+    {ChatterinoWatch} % Title
+    {} % Location
+    {Active} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Built a lightweight browser extension (Chrome \& Firefox) linking web streaming with native Chatterino instances automatically.}
+        \item {Currently maintaining an active user base of approximately 160 daily users relying on the extension for continuous data synchronization.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Kernel Developer} % Role
+    {NP2\_Kernel} % Title
+    {} % Location
+    {2023 - 2024} % Date(s)
+    {
+      \begin{cvitems} % Description(s)
+        \item {Compiled and maintained a custom Android kernel for the Nothing Phone 2 based on LineageOS source trees.}
+        \item {Incorporated custom performance patches, advanced driver integration, and enhanced security primitives.}
+      \end{cvitems}
+    }
+
+\end{cventries}
+
+
+%-------------------------------------------------------------------------------
+%	INFRASTRUCTURE & SELF-HOSTING
+%-------------------------------------------------------------------------------
+\cvsection{Infrastructure \& Systems}
+\begin{cventries}
+  \cventry
+    {Self-Hosted Secure Infrastructure Architecture} % Job title
+    {Homelab \& Cloud Integration} % Organization
+    {} % Location
+    {Ongoing} % Date(s)
+    {
+      \begin{cvitems} % Description(s) of tasks/responsibilities
+        \item {Designed and actively maintain a complete digital infrastructure bridging a local Raspberry Pi 5 with an OVH VPS via Wireguard VPN tunnels.}
+        \item {Deployed and managed an array of self-hosted services including a Matrix server for decentralized communication, Nextcloud, Vaultwarden, and custom Discord bots (YAGPDB + VOCARD).}
+        \item {Engineered a fully-featured game and application hosting environment utilizing Pterodactyl Panel alongside Wings and custom extensions for optimal resource scheduling.}
+        \item {Securely route traffic using Nginx stream modules (Reverse Proxy), enforcing strict zero-trust principles and robust network isolation.}
+      \end{cvitems}
+    }
+\end{cventries}
+
+
+%-------------------------------------------------------------------------------
+%	SKILLS
+%-------------------------------------------------------------------------------
+\cvsection{Skills}
+\begin{cvskills}
+  \cvskill
+    {Languages}
+    {Spanish (Native) \enskip\cdotp\enskip English (Fluent Written, Advanced Spoken)}
+  \cvskill
+    {Backend}
+    {Python, Node.js, Go, SQL (PostgreSQL), JavaScript, TypeScript, Lua, PHP, C\#, Java}
+  \cvskill
+    {Frontend}
+    {HTML5, CSS3, React, Vue.js, Vite, Tailwind CSS, Webpack}
+  \cvskill
+    {Infrastructure}
+    {Linux (Debian/DietPi, Arch, Kali), Docker, Nginx, Wireguard VPN, Bash/Shell Scripting, Hardware Diagnostics}
+  \cvskill
+    {Tools \& Workflows}
+    {Git, VSCodium, Unity, Blender, Adobe Premiere Pro, DaVinci Resolve}
+\end{cvskills}
+
+
+%-------------------------------------------------------------------------------
+%	EDUCATION
+%-------------------------------------------------------------------------------
+\cvsection{Education}
+\begin{cventries}
+
+  \cventry
+    {Degree in Microcomputer Systems \& Networks (SMR)} % Degree
+    {FDP Rioja} % Institution
+    {Spain} % Location
+    {2024 - 2026} % Date(s)
+    {
+      \begin{cvitems} % Description(s) bullet points
+        \item {Focusing on systems administration, network architectures, and hardware configurations.}
+      \end{cvitems}
+    }
+
+  \cventry
+    {Educación Secundaria Obligatoria (ESO)} % Degree
+    {IES} % Institution
+    {Spain} % Location
+    {Graduated} % Date(s)
+    {}
+
+\end{cventries}
+
+
+%-------------------------------------------------------------------------------
+%	EXTRACURRICULARS / CONTENT CREATION
+%-------------------------------------------------------------------------------
+\cvsection{Content Creation \& Communication}
+\begin{cventries}
+  \cventry
+    {Digital Content Creator / VTuber}
+    {MiguVT}
+    {Twitch / YouTube}
+    {Ongoing}
+    {
+      \begin{cvitems}
+        \item {Built a technical and gaming-oriented community featuring over 1,400 Twitch followers and 730+ YouTube subscribers.}
+        \item {Leverage strong real-time communication skills, project ideation, and community management alongside creative software proficiencies (OBS, video editing, 3D avatar rendering pipelines).}
+      \end{cvitems}
+    }
+\end{cventries}
+
+\end{document}
