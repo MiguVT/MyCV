@@ -1,12 +1,17 @@
+
 .PHONY: all clean
 
 CC = lualatex
 OUT_DIR = .
-CV_SRCS = $(shell find $(OUT_DIR) -type f -name '*.tex' -not -name 'miguvt_cv.tex')
+CV_NAMES = miguvt_cv miguvt_cv_ES
+CV_SRCS = $(shell find $(OUT_DIR) -type f -name '*.tex' \
+	-not -name 'miguvt_cv.tex' \
+	-not -name 'miguvt_cv_ES.tex')
 
-all: $(foreach x, miguvt_cv, $x.pdf)
+all: $(foreach x,$(CV_NAMES),$x.pdf)
 
-miguvt_cv.pdf: $(OUT_DIR)/miguvt_cv.tex $(CV_SRCS)
+%.pdf: $(OUT_DIR)/%.tex $(CV_SRCS)
+	$(CC) -output-directory=$(OUT_DIR) $<
 	$(CC) -output-directory=$(OUT_DIR) $<
 
 clean:

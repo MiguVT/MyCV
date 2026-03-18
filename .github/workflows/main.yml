@@ -27,4 +27,6 @@ jobs:
     - uses: actions/upload-artifact@v6
       with:
         name: CV
-        path: miguvt_cv.pdf
+        path: |
+          miguvt_cv.pdf
+          miguvt_cv_ES.pdf
