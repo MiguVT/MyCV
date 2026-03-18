@@ -1,13 +1,13 @@
 .PHONY: all clean
 
-CC = xelatex
-SRC = miguvt_cv.tex
-PDF = miguvt_cv.pdf
+CC = lualatex
+OUT_DIR = .
+CV_SRCS = $(shell find $(OUT_DIR) -type f -name '*.tex' -not -name 'miguvt_cv.tex')
 
-all: $(PDF)
+all: $(foreach x, miguvt_cv, $x.pdf)
 
-$(PDF): $(SRC)
-	$(CC) $<
+miguvt_cv.pdf: $(OUT_DIR)/miguvt_cv.tex $(CV_SRCS)
+	$(CC) -output-directory=$(OUT_DIR) $<
 
 clean:
-	rm -rf *.aux *.log *.out *.pdf
+	rm -rf $(OUT_DIR)/*.pdf $(OUT_DIR)/*.aux $(OUT_DIR)/*.log $(OUT_DIR)/*.out
